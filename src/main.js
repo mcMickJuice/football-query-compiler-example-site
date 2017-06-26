@@ -17,8 +17,6 @@ function bootstrap() {
     compiler.compile(queryValue)
   })
 
-  // compiler.on('tokens', tokens => {
-  // })
 
   compiler.on('ast', ast => {
     treeView.innerHTML = ''
@@ -37,7 +35,7 @@ function bootstrap() {
   })
 
   compiler.on('error', err => {
-    errorView.textContent = err.stack
+    errorView.textContent = err.message
   })
 }
 
