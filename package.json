@@ -7,7 +7,7 @@
   "author": "mcMickJuice <mikejoyce19@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./server",
+    "start": "node ./main",
     "start:watch": "webpack-dev-server --config ./webpack.config.js --open",
     "build": "set NODE_ENV=production&&webpack --config ./webpack.config.js",
     "heroku-postbuild": "npm run build",
