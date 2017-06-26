@@ -1,0 +1,26 @@
+{
+  "name": "football-query-compiler-example-site",
+  "version": "1.0.0",
+  "description": "compiler football",
+  "main": "index.js",
+  "repository": "https://github.com/mcMickJuice/football-query-compiler-example-site",
+  "author": "mcMickJuice <mikejoyce19@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --open",
+    "build": "webpack --config ./webpack.config.js",
+    "lint": "eslint **/*.js"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "pre-commit": "^1.2.2",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "football-query-compiler": "^0.1.1",
+    "webpack": "^3.0.0"
+  }
+}
