@@ -1,4 +1,4 @@
-const {tokenizer, parser} = require('football-query-compiler')
+const {lexer, parser} = require('football-query-compiler')
 const humanReadableTransformer = require('football-query-compiler/src/code-transformers/human-readable/transformer')
 const humanReadableGenerator = require('football-query-compiler/src/code-transformers/human-readable/generator')
 
@@ -28,7 +28,7 @@ class Compiler {
 
   compile(query) {
     try {
-      const tokens = tokenizer(query)
+      const tokens = lexer(query)
       this.emit('tokens', tokens)
 
       const ast = parser(tokens)
